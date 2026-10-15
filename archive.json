@@ -1,0 +1,81 @@
+{
+  "archive_title": "ATLAS — Open Observatory",
+  "version": "0.1",
+  "date": "2026-10-15",
+  "author": "Dasion",
+  "purpose": "Shareable independent research archive",
+  "entries": [
+    {
+      "id": "A01",
+      "title": "The observer reversal",
+      "category": "Architecture",
+      "status": "Conceptual model",
+      "summary": "Change the question from 'How do I win the game?' to 'How does the observer model the game, its rules and its costs?'",
+      "question": "Can shifting the observer's frame change the strategy without changing other people's agency?",
+      "boundary": "A model of interpretation, not evidence that an external game has been imposed."
+    },
+    {
+      "id": "A02",
+      "title": "Inventio Absurdio Reductio",
+      "category": "Method",
+      "status": "Author-defined concept",
+      "summary": "An original name for a paradox-driven method of testing assumptions through intentionally unusual scenarios.",
+      "question": "Which assumptions survive when an apparently absurd case is made internally consistent?",
+      "boundary": "Not a spell and not a proven mathematical or physical theorem; formal definition remains open."
+    },
+    {
+      "id": "A03",
+      "title": "Entropy, available work and heat death",
+      "category": "Physics",
+      "status": "Established framework + open extrapolation",
+      "summary": "The second law constrains available work. Heat death is a possible distant consequence of certain cosmological models, not a directly observed event.",
+      "question": "What physical gradients or non-equilibrium structures can persist under different cosmological assumptions?",
+      "boundary": "No demonstrated procedure for reversing cosmic entropy or preventing the ultimate fate of the universe."
+    },
+    {
+      "id": "A04",
+      "title": "Gravitational collapse and entropy",
+      "category": "Physics",
+      "status": "Research question",
+      "summary": "Gravitational collapse and entropy growth are not simple opposites. Black holes, for example, are associated with large entropy.",
+      "question": "Under what conditions might a change in spacetime geometry modify available energy gradients or information horizons?",
+      "boundary": "Speculation about singularities does not establish navigable passages or cosmic survival mechanisms."
+    },
+    {
+      "id": "A05",
+      "title": "A hypothetical bifurcation point",
+      "category": "Physics",
+      "status": "Unverified hypothesis",
+      "summary": "A proposed question: might the transition between cosmological regimes have a critical condition rather than a single universal moment?",
+      "question": "Which equations, variables, and observables would define a reproducible transition?",
+      "boundary": "No numerical simulation, parameter set, or empirical result has yet been provided."
+    },
+    {
+      "id": "A06",
+      "title": "ATLAS as a research notebook",
+      "category": "Software",
+      "status": "Design intention",
+      "summary": "Use Atlas to preserve assumptions, provenance, counterexamples, versions and testable predictions instead of treating intuition as final evidence.",
+      "question": "Can the system log alternative hypotheses and the reasons for accepting or rejecting each?",
+      "boundary": "This archive does not claim Atlas currently implements all these capabilities."
+    },
+    {
+      "id": "A07",
+      "title": "The fictional journey",
+      "category": "Metaphor",
+      "status": "Narrative analogy",
+      "summary": "A fictional sports car, an impossible drive, and an undefined destination are used to explore control, consent, agency and observer position.",
+      "question": "What changes when the passenger builds the system but deliberately leaves the driver's choices free?",
+      "boundary": "This story is a metaphor, not a claim about Emma Watson's feelings, choices or participation."
+    },
+    {
+      "id": "A08",
+      "title": "Stories as pattern detectors",
+      "category": "Metaphor",
+      "status": "Narrative analogy",
+      "summary": "Harry Potter, The Hunger Games, Mortal Kombat and Megumin serve as creative comparison points for loops, confrontation, choice, mortality and reinvention.",
+      "question": "Which parallels remain meaningful after differences between the fictional worlds are taken seriously?",
+      "boundary": "Associative parallels are interpretations; they are not physical evidence."
+    }
+  ]
+}
