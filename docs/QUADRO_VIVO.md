@@ -68,3 +68,19 @@ di terzi. Non usare i dati di traffico per dedurre l'identità del lettore.
 - I rimandi `#n001` e `observatory.html#A01` aprono le voci corrette.
 - Su viewport piccoli le schede e la navigazione restano leggibili.
 - L'account amministratore reale non è ancora implementato.
+
+## Pubblicazioni bilingui IT / EN
+
+Ogni post va inserito anche in `wall.en.json`, con lo **stesso ID**, la
+**stessa data**, la stessa chiave `tag` e gli stessi `href` di
+`wall.json`. Traduci `title`, `lead`, `paragraphs` e le
+etichette `links[].text`. Traduci anche nomi, descrizioni ed etichette
+dei percorsi in `trails`, conservando i loro ID.
+
+Il menu **IT / EN** seleziona il file con `?lang=it` e `?lang=en`.
+Gli aggiornamenti appariranno nella pagina corrispondente quando saranno
+presenti nel relativo JSON pubblicato.
+
+**Verifica editoriale:** confronta il numero di post, ID, date, tag,
+destinazioni e sezioni tra i due file prima di rendere visibile la modifica.
+Evita un post aggiornato in una sola lingua senza segnalarlo.
