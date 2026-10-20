@@ -1,0 +1,131 @@
+{
+  "edition": "ATLAS · Living Canvas 0.1",
+  "updated": "2026-10-20",
+  "attribution": "Ideas and creative direction: Dasion. Editorial development: Dasion in dialogue with ChatGPT.",
+  "posts": [
+    {
+      "id": "n003",
+      "date": "2026-10-20",
+      "tag": "Diario",
+      "title": "A page worth coming back to",
+      "lead": "No longer just an archive: ATLAS becomes a canvas that changes, one fragment at a time.",
+      "paragraphs": [
+        "Imagine coming back to this page tomorrow. You don't need to know what an algorithm is, or to have followed every conversation that led us here. You'll find another piece of the puzzle, another question, another path.",
+        "We'll write down what we understand before describing what we still don't know. Each new piece connects to what came before: the canvas grows without erasing its history.",
+        "This is an open book, not a prophecy. Anyone can read it, with no expectation of a reply."
+      ],
+      "links": [
+        {
+          "text": "The observer reversal",
+          "href": "observatory.html#A01"
+        },
+        {
+          "text": "ATLAS as a research notebook",
+          "href": "observatory.html#A06"
+        }
+      ]
+    },
+    {
+      "id": "n002",
+      "date": "2026-10-20",
+      "tag": "Metodo",
+      "title": "Ideas can take more than one path",
+      "lead": "A good question does not dictate a conclusion: it opens up alternatives we can compare.",
+      "paragraphs": [
+        "When an idea sounds absurd, we can dismiss it, believe it immediately, or ask better questions. What are we assuming? What would disprove it? Where does metaphor end and verification begin?",
+        "In ATLAS, we call this laboratory Inventio Absurdio Reductio: a creative name for a method still to be defined and tested, not an established scientific formula.",
+        "The reader's first fork in the road is a choice: explore an interpretation or demand evidence."
+      ],
+      "links": [
+        {
+          "text": "Inventio Absurdio Reductio",
+          "href": "observatory.html#A02"
+        },
+        {
+          "text": "A hypothetical bifurcation point",
+          "href": "observatory.html#A05"
+        }
+      ]
+    },
+    {
+      "id": "n001",
+      "date": "2026-10-15",
+      "tag": "Archivio",
+      "title": "Eight questions, no mandatory ending",
+      "lead": "The Open Observatory began with eight entries about architecture, method, physics, software and metaphor.",
+      "paragraphs": [
+        "The archive's first eight entries are the visible starting point of this page: separate ideas, each with its own question and clearly stated limits.",
+        "They can now become nodes in a story you can navigate. New publications won't overwrite the past; they'll connect it to the present."
+      ],
+      "links": [
+        {
+          "text": "Explore the original archive",
+          "href": "observatory.html"
+        },
+        {
+          "text": "Stories as pattern detectors",
+          "href": "observatory.html#A08"
+        }
+      ]
+    }
+  ],
+  "trails": [
+    {
+      "id": "osservare",
+      "name": "Observe",
+      "description": "How does a question change when we shift our point of view?",
+      "links": [
+        {
+          "text": "The observer reversal",
+          "href": "observatory.html#A01"
+        },
+        {
+          "text": "The research notebook",
+          "href": "observatory.html#A06"
+        },
+        {
+          "text": "A page worth coming back to",
+          "href": "#n003"
+        }
+      ]
+    },
+    {
+      "id": "biforcazioni",
+      "name": "Branch out",
+      "description": "A question can lead down different paths without turning an intuition into evidence.",
+      "links": [
+        {
+          "text": "Inventio Absurdio Reductio",
+          "href": "observatory.html#A02"
+        },
+        {
+          "text": "A bifurcation point (hypothesis)",
+          "href": "observatory.html#A05"
+        },
+        {
+          "text": "Ideas can take more than one path",
+          "href": "#n002"
+        }
+      ]
+    },
+    {
+      "id": "raccontare",
+      "name": "Tell stories",
+      "description": "Storytelling helps us explore possibilities while respecting the boundary between fiction and reality.",
+      "links": [
+        {
+          "text": "The fictional journey",
+          "href": "observatory.html#A07"
+        },
+        {
+          "text": "Stories as pattern detectors",
+          "href": "observatory.html#A08"
+        },
+        {
+          "text": "The first eight questions",
+          "href": "#n001"
+        }
+      ]
+    }
+  ]
+}
