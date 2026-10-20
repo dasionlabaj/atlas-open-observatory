@@ -16,10 +16,14 @@
   script.dataset.goatcounter = "https://" + code + ".goatcounter.com/count";
   document.head.appendChild(script);
 
+  // Keep the notice truthful and in the selected language if counting is enabled.
+  const english = new URLSearchParams(window.location.search).get("lang") === "en" ||
+    (document.documentElement.lang === "en" && !window.location.search.includes("lang=it"));
   const pill = document.getElementById("analytics-pill");
-  if (pill) pill.textContent = "Cookie-free visit statistics";
+  if (pill) pill.textContent = english
+    ? "Cookie-free aggregate statistics" : "Statistiche aggregate senza cookie";
   const note = document.getElementById("analytics-note");
-  if (note) note.textContent =
-    "This archive works offline. When viewed online it collects privacy-friendly " +
-    "aggregate visit statistics using GoatCounter (no tracking cookies).";
+  if (note) note.textContent = english
+    ? "When viewed online, this page uses GoatCounter for privacy-friendly aggregate visit statistics without tracking cookies."
+    : "Quando è online, questa pagina usa GoatCounter per statistiche aggregate delle visite senza cookie di tracciamento.";
 })();
