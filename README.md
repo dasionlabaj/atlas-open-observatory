@@ -3,7 +3,7 @@
 **Autore e direzione:** Dasion  
 **Collaborazione editoriale:** Dasion in dialogo con ChatGPT  
 **Data della prima tavolozza:** 20 ottobre 2026  
-**Stato:** Sviluppo su `feature/atlas-living-wall-0.1`, **non pubblicato sul sito pubblico**.
+**Stato:** Contenuti bilingui preparati su `feature/atlas-living-wall-0.1`; le impostazioni e la pubblicazione GitHub Pages sono gestite dal proprietario del repository.
 
 ## Che cos'è
 
@@ -26,7 +26,9 @@ preservato in `observatory.html` con ancore `#A01` … `#A08`.
 
 ## Contenuti e privacy
 
-- `wall.json`: testi e collegamenti del diario; unica sorgente dei capitoli.
+- `wall.json`: testi e collegamenti del diario in italiano.
+- `wall.en.json`: traduzione inglese completa degli stessi capitoli e percorsi.
+- `wall.js`: interfaccia IT/EN e selezione del file di lingua tramite `?lang=it` o `?lang=en`.
 - `wall.js`: legge il JSON e crea il feed in modo sicuro con `textContent`.
 - `wall.css`: stile responsive.
 - `index.html`: nuovo portale.
@@ -75,3 +77,23 @@ lettura o approvazione di una figura pubblica.
 
 [docs/ADMIN_VISITS.md](docs/ADMIN_VISITS.md) descrive il setup GoatCounter e
 la futura area amministrativa sicura. Per ora il contatore resta disabilitato.
+
+## Italiano / English
+
+L'ingresso alla Tavolozza usa l'italiano di default:
+- Italiano: `https://dasionlabaj.github.io/atlas-open-observatory/?lang=it`
+- English: `https://dasionlabaj.github.io/atlas-open-observatory/?lang=en`
+
+Il selettore **IT / EN** è nella barra superiore. Cambia testi della pagina,
+capitoli, categorie, ricerca, percorsi e formati delle date. I link al diario
+conservano gli identificatori `#n001`, `#n002` ecc. in entrambe le lingue.
+La vecchia pagina `observatory.html` contiene già le otto schede **in inglese**
+e offre link di ritorno a entrambe le lingue della Tavolozza.
+
+Ogni aggiornamento deve essere pubblicato in **entrambi** i file
+`wall.json` e `wall.en.json`, mantenendo identici `id`, `date`,
+`tag` (chiavi canoniche italiane), e destinazioni `href`.
+I testi visibili devono essere tradotti e revisionati; nessuna traduzione
+automatica viene eseguita dal browser o da servizi di terze parti.
+
+Le visite rimangono aggregate e non consentono di identificare chi legge.
