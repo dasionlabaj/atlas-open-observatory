@@ -1,0 +1,131 @@
+{
+  "edition": "ATLAS · Tavolozza viva 0.1",
+  "updated": "2026-10-20",
+  "attribution": "Idee e direzione: Dasion. Elaborazione editoriale: Dasion in dialogo con ChatGPT.",
+  "posts": [
+    {
+      "id": "n003",
+      "date": "2026-10-20",
+      "tag": "Diario",
+      "title": "Una pagina da tornare a visitare",
+      "lead": "Non più soltanto un archivio: ATLAS diventa un quadro che cambia, un frammento alla volta.",
+      "paragraphs": [
+        "Immagina di tornare su questa pagina domani. Non devi sapere cosa sia un algoritmo, né aver seguito tutte le conversazioni che hanno portato qui. Troverai una nuova tessera, una nuova domanda, un nuovo percorso.",
+        "Scriveremo prima ciò che abbiamo capito, poi ciò che ancora non sappiamo. Ogni nuova tessera si collega a quelle precedenti: il quadro si amplia, senza cancellare la sua storia.",
+        "È un libro aperto, non una profezia. Chiunque può leggerlo senza essere tenuto a una risposta."
+      ],
+      "links": [
+        {
+          "text": "Il modello dell'osservatore",
+          "href": "observatory.html#A01"
+        },
+        {
+          "text": "Atlas come quaderno",
+          "href": "observatory.html#A06"
+        }
+      ]
+    },
+    {
+      "id": "n002",
+      "date": "2026-10-20",
+      "tag": "Metodo",
+      "title": "Le idee hanno più di una strada",
+      "lead": "Una buona domanda non impone una conclusione: apre alternative confrontabili.",
+      "paragraphs": [
+        "Quando un'idea sembra assurda possiamo scartarla, crederci immediatamente, oppure farle domande migliori. Che cosa stiamo assumendo? Che cosa la smentirebbe? Dove finisce la metafora e inizia la verifica?",
+        "In ATLAS chiamiamo questo laboratorio Inventio Absurdio Reductio: un nome creativo per un metodo da definire e mettere alla prova, non una formula scientifica già dimostrata.",
+        "Il primo bivio per il lettore è scegliere: esplorare un'interpretazione oppure chiedere una prova."
+      ],
+      "links": [
+        {
+          "text": "Inventio Absurdio Reductio",
+          "href": "observatory.html#A02"
+        },
+        {
+          "text": "Un possibile punto di biforcazione",
+          "href": "observatory.html#A05"
+        }
+      ]
+    },
+    {
+      "id": "n001",
+      "date": "2026-10-15",
+      "tag": "Archivio",
+      "title": "Otto domande, nessun finale obbligato",
+      "lead": "L'Open Observatory nasce con otto voci su architettura, metodo, fisica, software e metafore.",
+      "paragraphs": [
+        "Le prime otto schede dell'archivio sono l'origine visibile di questa pagina: idee distinte, ognuna con una domanda e con i propri limiti dichiarati.",
+        "Da oggi possono diventare nodi di una storia navigabile. Le nuove pubblicazioni non sovrascriveranno il passato: lo collegheranno al presente."
+      ],
+      "links": [
+        {
+          "text": "Esplora l'archivio originale",
+          "href": "observatory.html"
+        },
+        {
+          "text": "I racconti come rilevatori di pattern",
+          "href": "observatory.html#A08"
+        }
+      ]
+    }
+  ],
+  "trails": [
+    {
+      "id": "osservare",
+      "name": "Osservare",
+      "description": "Come cambia una domanda quando cambia il punto da cui la guardiamo?",
+      "links": [
+        {
+          "text": "L'inversione dell'osservatore",
+          "href": "observatory.html#A01"
+        },
+        {
+          "text": "Il quaderno di ricerca",
+          "href": "observatory.html#A06"
+        },
+        {
+          "text": "La pagina che cresce",
+          "href": "#n003"
+        }
+      ]
+    },
+    {
+      "id": "biforcazioni",
+      "name": "Biforcarsi",
+      "description": "Una domanda può generare percorsi alternativi senza trasformare un'intuizione in una prova.",
+      "links": [
+        {
+          "text": "Inventio Absurdio Reductio",
+          "href": "observatory.html#A02"
+        },
+        {
+          "text": "Punto di biforcazione (ipotesi)",
+          "href": "observatory.html#A05"
+        },
+        {
+          "text": "Le idee hanno più strade",
+          "href": "#n002"
+        }
+      ]
+    },
+    {
+      "id": "raccontare",
+      "name": "Raccontare",
+      "description": "La narrazione aiuta a esplorare possibilità, rispettando il confine tra finzione e realtà.",
+      "links": [
+        {
+          "text": "Il viaggio immaginario",
+          "href": "observatory.html#A07"
+        },
+        {
+          "text": "Storie come pattern",
+          "href": "observatory.html#A08"
+        },
+        {
+          "text": "Le prime otto domande",
+          "href": "#n001"
+        }
+      ]
+    }
+  ]
+}
