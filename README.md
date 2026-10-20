@@ -1,44 +1,77 @@
-# ATLAS — Open Observatory
+# ATLAS — Tavolozza viva 0.1
 
-**Version:** 0.1 (15 October 2026)  
-**Author:** Dasion  
-**Status:** Public research notebook. GitHub Pages website requires enabling Pages in repository settings.
+**Autore e direzione:** Dasion  
+**Collaborazione editoriale:** Dasion in dialogo con ChatGPT  
+**Data della prima tavolozza:** 20 ottobre 2026  
+**Stato:** Sviluppo su `feature/atlas-living-wall-0.1`, **non pubblicato sul sito pubblico**.
 
-## Purpose
+## Che cos'è
 
-An independent, freely browsable archive of questions, hypotheses, narrative metaphors and software architecture notes at the intersection of physics, software and philosophy. Readers may explore these ideas in any order, without any presumption of personal involvement by a public figure.
+ATLAS non è più soltanto un indice statico: è un **quadro narrativo interattivo**
+costruito un aggiornamento alla volta. Ogni capitolo può rimandare a un altro,
+senza pretendere che la ricerca abbia già un esito o un unico percorso.
 
-## Contents
+Il nuovo ingresso è `index.html`. Il vecchio Open Observatory è stato
+preservato in `observatory.html` con ancore `#A01` … `#A08`.
 
-- `index.html` — self-contained searchable web page; no external scripts, tracking, sign-in or account requirements.
-- `archive.json` — structured version of the eight entries.
-- `README.md` — context, science boundaries and publication instructions.
+## Funzioni del Muro
 
-## Science and fiction boundaries
+- **Novità**: cronologia, ricerca testuale, filtro categoria e capitoli espandibili.
+- **Percorsi**: tre itinerari navigabili con rimandi alle pubblicazioni e alle
+  otto schede originali.
+- **Archivio**: ingresso alla versione originaria.
+- **Aggiorna**: ricarica `wall.json` senza aggiornare l'intera pagina.
+- Nessuna piattaforma esterna per i commenti, nessun account pubblico,
+  nessuna spesa API o backend necessario per consultare il quadro.
 
-Entries distinguish established physics, open research questions, author-defined concepts and narrative analogies. This archive does **not** demonstrate a Theory of Everything, functioning warp drive, reversal of cosmic entropy or a feasible means of changing the ultimate fate of the universe. Fictional dialogue does not imply communication with actual public figures.
+## Contenuti e privacy
 
-## Privacy and respect
+- `wall.json`: testi e collegamenti del diario; unica sorgente dei capitoli.
+- `wall.js`: legge il JSON e crea il feed in modo sicuro con `textContent`.
+- `wall.css`: stile responsive.
+- `index.html`: nuovo portale.
+- `observatory.html`: archivio originale, con filtro delle otto schede.
+- `analytics-config.js` / `analytics.js`: contatore GoatCounter **spento**
+  finché non è configurato un codice pubblico.
+- `admin/index.html`: **solo un mockup pubblico, non un'area privata**.
+  Non inserire password, credenziali o dati privati nel repository.
 
-The public archive excludes private addresses, phone numbers, medical and family details, private correspondence, account credentials and API keys. The author name "Dasion" is intentionally shown. References to Emma Watson or fictional characters are conceptual and illustrative only: no affiliation, endorsement, readership or participation is claimed.
+Il quadro può essere letto da **chiunque** se pubblicato. Le statistiche
+aggregate non identificano una specifica persona, e nessun contenuto è
+rappresentato come messaggio di/verso una persona determinata.
 
-## Enable GitHub Pages
+## Come aggiungere un capitolo
 
-Open **Settings → Pages** in this repository. Under **Build and deployment**, set **Source** to **Deploy from a branch**, choose **main** and **/(root)**, then select **Save**. Once GitHub finishes deployment, check the Pages URL shown there and confirm the site loads correctly.
+Vedi [docs/QUADRO_VIVO.md](docs/QUADRO_VIVO.md). In sintesi:
+1. Scriviamo il capitolo, decidiamo insieme se è adatto alla pubblicazione.
+2. Aggiungiamo un oggetto a `posts` in `wall.json` usando un nuovo ID (es. `n004`).
+3. Aggiorniamo il campo `updated` e, se utile, colleghiamo il capitolo a
+   un percorso in `trails`.
+4. Verifichiamo che il JSON sia valido; quando il sito verrà pubblicato,
+   il feed mostrerà il testo all'aggiornamento della pagina.
+5. Nessun post appare in automatico da questa chat: ogni modifica
+   richiede un aggiornamento esplicito dei contenuti del repository.
 
-## Suggested next research step
+## Anteprima e futura pubblicazione gratuita
 
-For each hypothesis, write down the baseline model, assumptions, variables, equations, proposed test, predicted observations and limitations. Separate mathematical consistency from experimental evidence.
+Senza toccare `main`, si può testare il sito con un piccolo server HTTP
+locale dalla cartella del repository (`python -m http.server 8000`) e aprendo
+`http://localhost:8000/`. Questo serve perché `fetch` legge `wall.json`.
 
-## Admin visits experiment (not deployed)
+Per avere un sito pubblico gratuito con GitHub Pages, configurare
+**Settings → Pages → Deploy from a branch** sul ramo voluto e su `/(root)`.
+La pubblicazione è un'azione distinta dai commit di sviluppo; richiede la
+scelta esplicita del titolare del repository. Non attiviamo il sito né
+cambiamo la visibilità del repository con questa versione.
 
-On the feature branch `feature/admin-visits-0.1`, the Observatory has an
-optional visit counter integration (`analytics-config.js` and `analytics.js`)
-and a non-authenticated **admin interface preview** at `admin/index.html`.
+## Confini tra scienza, interpretazione e narrativa
 
-The counter is **disabled by default**, and the preview contains no sensitive
-information or real statistics. The authenticated statistics dashboard lives
-on GoatCounter until Atlas has a secure server-side `/admin`. Do not use
-a static HTML page to store admin passwords or API keys.
+Le schede distinguono nozioni consolidate, questioni aperte, ipotesi non
+verificate e analogie letterarie. Questo archivio **non** dimostra una
+teoria fisica universale né costituisce prova della partecipazione,
+lettura o approvazione di una figura pubblica.
 
-Instructions: [docs/ADMIN_VISITS.md](docs/ADMIN_VISITS.md).
+## Contatore futuro
+
+[docs/ADMIN_VISITS.md](docs/ADMIN_VISITS.md) descrive il setup GoatCounter e
+la futura area amministrativa sicura. Per ora il contatore resta disabilitato.
