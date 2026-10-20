@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ATLAS — Control Room 0.1 (preparazione)</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1020;--panel:#151d32;--fg:#f4f6fc;--muted:#aab7d2;--line:#34405c;--aqua:#73e1d8}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#28325c,transparent 55%),var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{max-width:780px;margin:8vh auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;gap:16px}h1{font-size:clamp(1.8rem,5vw,2.8rem);margin:8px 0}.eyebrow{font-size:.78rem;letter-spacing:.16em;color:var(--aqua);font-weight:800}.muted{color:var(--muted)}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:22px}.pill{border:1px solid var(--line);border-radius:40px;padding:5px 12px;font-size:.8rem;white-space:nowrap}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.tabs button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:10px 17px;cursor:pointer;font:inherit}.tabs button[aria-selected="true"]{color:var(--bg);background:var(--aqua);border-color:var(--aqua);font-weight:700}.tabs button:focus-visible,a:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.stat{padding:18px;border:1px solid var(--line);border-radius:13px}.stat strong{display:block;font-size:1.8rem;color:var(--aqua)}a{color:var(--aqua)}.cta{display:inline-block;background:var(--aqua);color:#0b1020;text-decoration:none;font-weight:800;border-radius:9px;padding:10px 16px;margin-top:8px}.notice{border-left:3px solid var(--aqua);padding:8px 14px;background:#1a2842;border-radius:0 9px 9px 0}
+    [hidden]{display:none!important}footer{margin-top:30px;color:var(--muted);font-size:.83rem}@media(max-width:480px){main{margin:2vh auto;padding:16px}.stats{grid-template-columns:1fr}header{align-items:start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <main>
+    <header><div><div class="eyebrow">ATLAS / CONTROL ROOM</div><h1>Cabina di comando</h1><p class="muted">Versione 0.1 · anteprima tecnica</p></div><span class="pill">Admin · non attivo</span></header>
+    <div class="notice"><strong>Nota di sicurezza:</strong> questa pagina è solo una schermata di preparazione, non un'area autenticata. Non mostra dati privati. Le statistiche reali saranno accessibili soltanto tramite il login di GoatCounter.</div>
+    <div class="tabs" role="tablist" aria-label="Sezioni">
+      <button type="button" role="tab" aria-controls="visite" aria-selected="true" id="tab-visite" data-panel="visite">Visite</button>
+      <button type="button" role="tab" aria-controls="sistema" aria-selected="false" id="tab-sistema" data-panel="sistema">Sistema</button>
+      <button type="button" role="tab" aria-controls="profilo" aria-selected="false" id="tab-profilo" data-panel="profilo">Profilo</button>
+    </div>
+    <section class="panel" role="tabpanel" id="visite" aria-labelledby="tab-visite">
+      <h2>Statistiche Observatory</h2>
+      <div class="stats"><div class="stat">Visite totali<strong>—</strong><small class="muted">Non collegate</small></div><div class="stat">Visite oggi<strong>—</strong><small class="muted">Non collegate</small></div></div>
+      <p id="analytics-status" class="muted">Contatore non configurato.</p>
+      <a id="analytics-link" class="cta" href="https://www.goatcounter.com/signup" rel="noopener noreferrer" target="_blank">Configura GoatCounter</a>
+      <p class="muted">I valori reali si consultano sulla dashboard protetta di GoatCounter, non direttamente in questa anteprima.</p>
+    </section>
+    <section class="panel" role="tabpanel" id="sistema" aria-labelledby="tab-sistema" hidden><h2>Stato sistema</h2><p>Portale: HTML statico.</p><p>Gateway API Atlas: non collegato.</p><p>Autenticazione nativa /admin: non implementata.</p><p class="muted">Lo stato online reale sarà disponibile quando il gateway sarà attivo.</p></section>
+    <section class="panel" role="tabpanel" id="profilo" aria-labelledby="tab-profilo" hidden><h2>Profilo amministratore</h2><p>Nome previsto: <strong>captain</strong></p><p>Accesso alle visite: account GoatCounter, da creare manualmente.</p><p>Futura autenticazione Atlas: da implementare lato server.</p><p class="muted">Non salvare mai password, token di accesso o chiavi API in pagine HTML o repository pubblici.</p></section>
+    <footer>ATLAS Open Observatory · Area admin in preparazione · Nessun accesso privato è implementato in questa versione.</footer>
+  </main>
+  <script src="../analytics-config.js"></script>
+  <script>
+    (function(){
+      "use strict";
+      const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+      for (const tab of tabs) tab.addEventListener("click",function(){
+        for (const t of tabs) {
+          const chosen = t === tab;
+          t.setAttribute("aria-selected", String(chosen));
+          document.getElementById(t.dataset.panel).hidden = !chosen;
+        }
+      });
+      const code = String(window.ATLAS_GOATCOUNTER_CODE || "").trim().toLowerCase();
+      if (/^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/.test(code)) {
+        document.getElementById("analytics-status").textContent =
+          "Contatore configurato. Effettua l'accesso per leggere i dati.";
+        const a = document.getElementById("analytics-link");
+        a.href = "https://" + code + ".goatcounter.com/";
+        a.textContent = "Apri dashboard protetta";
+      }
+    })();
+  </script>
+</body></html>
