@@ -11,3 +11,11 @@ button,input{font:inherit}button{cursor:pointer}a{color:var(--mint);text-decorat
 [hidden]{display:none!important}
 @media(max-width:740px){.shell{padding:0 15px 50px}.hero{padding:42px 0 24px}.top{align-items:flex-start;flex-direction:column;gap:10px}.trailgrid{grid-template-columns:1fr}.post{padding:19px}.panelbar{align-items:stretch}.tabs{width:100%}.tab{flex:1;padding:9px}.refresh{justify-content:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* Shareable language switch. Active locale is visually and semantically marked. */
+.language-picker{display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid var(--line);border-radius:999px;background:var(--surface);white-space:nowrap}
+.language-picker a{padding:4px 10px;border-radius:999px;text-decoration:none;font-size:.8rem;font-weight:800;color:var(--muted);line-height:1.5}
+.language-picker a[aria-current="page"]{background:var(--mint);color:#0b1020}
+.language-picker a:not([aria-current="page"]):hover{color:var(--fg);background:var(--surface2)}
+@media(max-width:740px){.top-links{align-items:center;row-gap:12px}.language-picker{margin-top:1px}}
