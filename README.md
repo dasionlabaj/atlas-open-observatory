@@ -29,3 +29,16 @@ Open **Settings → Pages** in this repository. Under **Build and deployment**, 
 ## Suggested next research step
 
 For each hypothesis, write down the baseline model, assumptions, variables, equations, proposed test, predicted observations and limitations. Separate mathematical consistency from experimental evidence.
+
+## Admin visits experiment (not deployed)
+
+On the feature branch `feature/admin-visits-0.1`, the Observatory has an
+optional visit counter integration (`analytics-config.js` and `analytics.js`)
+and a non-authenticated **admin interface preview** at `admin/index.html`.
+
+The counter is **disabled by default**, and the preview contains no sensitive
+information or real statistics. The authenticated statistics dashboard lives
+on GoatCounter until Atlas has a secure server-side `/admin`. Do not use
+a static HTML page to store admin passwords or API keys.
+
+Instructions: [docs/ADMIN_VISITS.md](docs/ADMIN_VISITS.md).
